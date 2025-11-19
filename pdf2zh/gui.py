@@ -144,7 +144,8 @@ def verify_recaptcha(response):
     """
     recaptcha_url = "https://www.google.com/recaptcha/api/siteverify"
     data = {"secret": server_key, "response": response}
-    result = requests.post(recaptcha_url, data=data).json()
+    # Fix B113: add timeout to prevent hanging if server doesn't respond
+    result = requests.post(recaptcha_url, data=data, timeout=30).json()
     return result.get("success")
 
 

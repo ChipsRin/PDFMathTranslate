@@ -114,8 +114,10 @@ def init_db(remove_exists=False):
 
 def init_test_db():
     import tempfile
-
-    cache_db_path = tempfile.mktemp(suffix=".db")
+    
+    # Fix B306: use mkstemp instead of mktemp to avoid race condition
+    fd, cache_db_path = tempfile.mkstemp(suffix=".db")
+    os.close(fd) 
     test_db = SqliteDatabase(
         cache_db_path,
         pragmas={

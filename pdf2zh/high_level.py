@@ -338,7 +338,8 @@ def translate(
         ):
             print("Online files detected, downloading...")
             try:
-                r = requests.get(file, allow_redirects=True)
+                # Fix B113: add timeout to prevent hanging if server doesn't respond
+                r = requests.get(file, allow_redirects=True, timeout=30)
                 if r.status_code == 200:
                     with tempfile.NamedTemporaryFile(
                         suffix=".pdf", delete=False

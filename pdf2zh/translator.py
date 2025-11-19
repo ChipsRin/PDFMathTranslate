@@ -779,8 +779,9 @@ class AnythingLLMTranslator(BaseTranslator):
             "sessionId": "translation_expert",
         }
 
+        # Fix B113: add timeout to prevent hanging if server doesn't respond
         response = requests.post(
-            self.api_url, headers=self.headers, data=json.dumps(payload)
+            self.api_url, headers=self.headers, data=json.dumps(payload), timeout=30
         )
         response.raise_for_status()
         data = response.json()
@@ -821,8 +822,9 @@ class DifyTranslator(BaseTranslator):
         }
 
         # 向 Dify 服务器发送请求
+        # Fix B113: add timeout to prevent hanging if server doesn't respond
         response = requests.post(
-            self.api_url, headers=headers, data=json.dumps(payload)
+            self.api_url, headers=headers, data=json.dumps(payload), timeout=30
         )
         response.raise_for_status()
         response_data = response.json()
