@@ -1,0 +1,83 @@
+# Font names
+"CMR10"
+"CMSY10"
+"MSBM10"
+"XYpic"
+"MTEX"
+"rsfs10"
+"wasy10"
+"txsy"
+"TeX-"
+"+Times-Roman"
+"+Arial"
+
+# CID patterns
+"(cid:0)"
+"(cid:1)"
+"(cid:65535)"
+"(cid:-1)"
+
+# Greek letters (0x370-0x3FF)
+greek_alpha="\xce\xb1"
+greek_beta="\xce\xb2"
+greek_gamma="\xce\xb3"
+greek_delta="\xce\xb4"
+greek_epsilon="\xce\xb5"
+greek_theta="\xce\xb8"
+greek_lambda="\xce\xbb"
+greek_pi="\xcf\x80"
+greek_sigma="\xcf\x83"
+greek_omega="\xce\xa9"
+
+# Math symbols
+math_integral="\xe2\x88\xab"
+math_summation="\xe2\x88\x91"
+math_product="\xe2\x88\x8f"
+math_sqrt="\xe2\x88\x9a"
+math_partial="\xe2\x88\x82"
+math_nabla="\xe2\x88\x87"
+math_plusminus="\xc2\xb1"
+math_times="\xc3\x97"
+math_divide="\xc3\xb7"
+math_le="\xe2\x89\xa4"
+math_ge="\xe2\x89\xa5"
+math_ne="\xe2\x89\xa0"
+math_approx="\xe2\x89\x88"
+math_infty="\xe2\x88\x9e"
+
+# Special characters
+"\x00"
+"\x01"
+"\x1f"
+"\x7f"
+"\xff"
+uffff_char="\xef\xbf\xbf"
+
+# Template variables
+"${lang_in}"
+"${lang_out}"
+"${text}"
+"$lang_in"
+"$lang_out"
+"$text"
+
+# Edge cases
+" "
+"  "
+newline_char="\x0a"
+crlf_char="\x0d\x0a"
+tab_char="\x09"
+"utf-8"
+"UTF-8"
+
+# Fuzzer Recommended
+fuzz_rec_1="\x01\x00"
+fuzz_rec_2="\x01\x00\x00\x00"
+fuzz_rec_3="\x00\x00"
+fuzz_rec_4="\x01\x00\x00\x00\x00\x00\x00\x00"
+fuzz_rec_5="\x00\x00\x00\x00\x00\x00\x00\x00"
+fuzz_rec_6="\xff\xff"
+fuzz_rec_7="\xff\xff\xff\xff\xff\xff\xff\xff"
+fuzz_rec_8="\xff\xff\xff\xff"
+fuzz_rec_9="\x00\x00\x00\x00\x00\x00\x00\x03"
+fuzz_rec_10="\x02\x00\x00\x00\x00\x00\x00\x00"
