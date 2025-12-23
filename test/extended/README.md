@@ -39,5 +39,4 @@ Translated PDFs: `test/fixtures/translated_pdfs/` (cached to avoid repeated API 
 - translator.py: 49% → 72% (+23%)
 - pdfinterp.py: 16% → 45% (+29%)
 
-**Bug Discovery:**
-- Identified icml01.pdf issue: tiny fonts (<1.0pt) cause 89.6% text loss
+

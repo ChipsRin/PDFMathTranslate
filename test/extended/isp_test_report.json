@@ -1,0 +1,191 @@
+{
+  "timestamp": "2025-12-23 16:05:56",
+  "total_pdfs": 16,
+  "summary": {
+    "嚴重": 1,
+    "中度警告": 0,
+    "輕度警告": 0,
+    "提示": 2,
+    "正常": 13
+  },
+  "isp_stats": {
+    "Layout": {
+      "多欄 (Multi) + 無表格": {
+        "total": 7,
+        "嚴重": 1,
+        "中度警告": 0,
+        "輕度警告": 0,
+        "提示": 2,
+        "正常": 4,
+        "錯誤": 0
+      },
+      "單欄 (Single) + 無表格": {
+        "total": 8,
+        "嚴重": 0,
+        "中度警告": 0,
+        "輕度警告": 0,
+        "提示": 0,
+        "正常": 8,
+        "錯誤": 0
+      },
+      "單欄 (Single) + 有表格": {
+        "total": 1,
+        "嚴重": 0,
+        "中度警告": 0,
+        "輕度警告": 0,
+        "提示": 0,
+        "正常": 1,
+        "錯誤": 0
+      }
+    },
+    "Version": {
+      "早期版本 (≤1.3)": {
+        "total": 2,
+        "嚴重": 1,
+        "中度警告": 0,
+        "輕度警告": 0,
+        "提示": 0,
+        "正常": 1,
+        "錯誤": 0
+      },
+      "中期版本 (1.4-1.6)": {
+        "total": 13,
+        "嚴重": 0,
+        "中度警告": 0,
+        "輕度警告": 0,
+        "提示": 2,
+        "正常": 11,
+        "錯誤": 0
+      },
+      "現代版本 (≥1.7)": {
+        "total": 1,
+        "嚴重": 0,
+        "中度警告": 0,
+        "輕度警告": 0,
+        "提示": 0,
+        "正常": 1,
+        "錯誤": 0
+      }
+    },
+    "Font": {
+      "大量極小字體 (>10%)": {
+        "total": 1,
+        "嚴重": 1,
+        "中度警告": 0,
+        "輕度警告": 0,
+        "提示": 0,
+        "正常": 0,
+        "錯誤": 0
+      },
+      "標準字體範圍 (1-24pt)": {
+        "total": 15,
+        "嚴重": 0,
+        "中度警告": 0,
+        "輕度警告": 0,
+        "提示": 2,
+        "正常": 13,
+        "錯誤": 0
+      }
+    },
+    "Content": {
+      "圖文混排": {
+        "total": 5,
+        "嚴重": 1,
+        "中度警告": 0,
+        "輕度警告": 0,
+        "提示": 0,
+        "正常": 4,
+        "錯誤": 0
+      },
+      "純文字": {
+        "total": 11,
+        "嚴重": 0,
+        "中度警告": 0,
+        "輕度警告": 0,
+        "提示": 2,
+        "正常": 9,
+        "錯誤": 0
+      }
+    }
+  },
+  "warnings_log": [
+    [
+      "icml01-ffq_raw.pdf",
+      "嚴重",
+      "[內容] 行數嚴重丟失 (line:0.13, 7450→952 lines)",
+      {
+        "pdf_version": "早期版本 (≤1.3)",
+        "font_size_category": "大量極小字體 (>10%)",
+        "font_type_category": "標準字體",
+        "image_density": "稀疏圖片",
+        "page_count_category": "少量頁面",
+        "content_complexity": "圖文混排",
+        "layout_label": "多欄 (Multi) + 無表格",
+        "min_font_size": 0.11999999731779099,
+        "max_font_size": 13.289900779724121,
+        "avg_font_size": 0.15562352198691715,
+        "total_chars": 32886,
+        "total_images": 1,
+        "page_count": 8,
+        "has_math_fonts": false,
+        "has_tables": false
+      },
+      {
+        "char_ratio": 0.3713738368910783,
+        "line_ratio": 0.12778523489932886
+      }
+    ],
+    [
+      "1209.0095v1.pdf",
+      "提示",
+      "[內容] 行數略減 (line:0.77)",
+      {
+        "pdf_version": "中期版本 (1.4-1.6)",
+        "font_size_category": "標準字體範圍 (1-24pt)",
+        "font_type_category": "含數學字體",
+        "image_density": "稀疏圖片",
+        "page_count_category": "少量頁面",
+        "content_complexity": "純文字",
+        "layout_label": "多欄 (Multi) + 無表格",
+        "min_font_size": 4.981299877166748,
+        "max_font_size": 20.0,
+        "avg_font_size": 9.230847860972087,
+        "total_chars": 36502,
+        "total_images": 11,
+        "page_count": 10,
+        "has_math_fonts": true,
+        "has_tables": false
+      },
+      {
+        "char_ratio": 0.4281683195441346,
+        "line_ratio": 0.7668488160291439
+      }
+    ],
+    [
+      "1606.00863v2.pdf",
+      "提示",
+      "[內容] 行數略減 (line:0.71)",
+      {
+        "pdf_version": "中期版本 (1.4-1.6)",
+        "font_size_category": "標準字體範圍 (1-24pt)",
+        "font_type_category": "含數學字體",
+        "image_density": "稀疏圖片",
+        "page_count_category": "少量頁面",
+        "content_complexity": "純文字",
+        "layout_label": "多欄 (Multi) + 無表格",
+        "min_font_size": 4.263118267059326,
+        "max_font_size": 20.0,
+        "avg_font_size": 9.450139086948113,
+        "total_chars": 26229,
+        "total_images": 4,
+        "page_count": 5,
+        "has_math_fonts": true,
+        "has_tables": false
+      },
+      {
+        "char_ratio": 0.44568988524152653,
+        "line_ratio": 0.7107142857142857
+      }
+    ]
+  ]
+}
