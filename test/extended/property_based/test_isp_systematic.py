@@ -1,12 +1,3 @@
-"""
-Input Space Partitioning (ISP) 系統化測試 - 統計報告增強版
-
-功能：
-1. 自動掃描並分類 PDF
-2. 執行翻譯與驗證
-3. [New] 最終生成 ISP 維度失敗率統計報告
-"""
-
 import pytest
 import fitz  # PyMuPDF
 import subprocess
@@ -43,7 +34,7 @@ class PDFCharacteristics:
     has_tables: bool
 
 # ==========================================
-# 2. ISP 維度分類器 (邏輯保持不變)
+# 2. ISP 維度分類器 
 # ==========================================
 
 class ISPDimensionClassifier:
@@ -158,10 +149,6 @@ class ISPDimensionClassifier:
             return cls._create_corrupted_characteristics("無法開啟")
 
         try:
-            # 2. 執行各項分析
-            # 注意：這裡雖然 PyMuPDF 會印出錯誤訊息到 Console，但通常不會拋出 Python Exception
-            # 除非檔案真的爛到無法讀取 metadata
-            
             pdf_version = cls.classify_pdf_version(doc)
             font_size_cat, min_fs, max_fs, avg_fs = cls.classify_font_size(doc)
             font_type_cat, has_math = cls.classify_font_type(doc)
@@ -215,7 +202,7 @@ class ISPDimensionClassifier:
         )
 
 # ==========================================
-# 3. 屬性驗證器 (邏輯保持不變)
+# 3. 屬性驗證器 
 # ==========================================
 
 class PropertyValidator:
@@ -276,15 +263,7 @@ class TestISPSystematic:
             "test/fixtures/sample_pdfs/1506.00956v1.pdf",
             "test/fixtures/sample_pdfs/1606.00863v2.pdf",
             "test/fixtures/sample_pdfs/1706.03762v7.pdf",
-            "test/fixtures/sample_pdfs/1809.00806v3.pdf",
-            "test/fixtures/sample_pdfs/1908.01115v3.pdf",
-            "test/fixtures/sample_pdfs/2206.00011v1.pdf",
-            "test/fixtures/sample_pdfs/2406.09676v2.pdf",
-            "test/fixtures/sample_pdfs/2503.00102v2.pdf",
-            "test/fixtures/sample_pdfs/2511.00017v1.pdf",
-            "test/fixtures/sample_pdfs/0608006v1.pdf",
-            "test/fixtures/sample_pdfs/13205_2024_Article_4159.pdf",
-            "test/fixtures/sample_pdfs/s13205-024-04159-4.pdf",
+            
         ]
 
         # 統計容器

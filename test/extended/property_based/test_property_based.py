@@ -342,43 +342,4 @@ class TestRegexPatternMatching:
             pytest.fail("Regex pattern error")
 
 
-# ============================================================
-# 執行說明
-# ============================================================
-"""
-執行這個測試檔案：
 
-1. 執行所有屬性測試：
-   python -m pytest test/test_property_based.py -v
-
-2. 執行特定測試類別：
-   python -m pytest test/test_property_based.py::TestParagraphProperties -v
-
-3. 查看每個測試生成的案例（除錯模式）：
-   python -m pytest test/test_property_based.py -v -s
-
-4. 增加測試案例數量（預設 100 個）：
-   在測試函數上新增裝飾器：
-   @settings(max_examples=1000)
-
-重要概念：
-- Hypothesis 會自動生成邊界案例（0, 負數, 極大值等）
-- 如果測試失敗，Hypothesis 會自動縮小（shrink）到最小的失敗案例
-- @example 確保特定的邊界情況被測試
-
-測試覆蓋的性質：
-1. Paragraph 類：
-   - 物件建立的正確性
-   - 邊界關係的不變性
-   - 字體大小的合理性
-
-2. vflag() 函數：
-   - 字體名分割的正確性
-   - bytes/str 解碼的健壯性
-   - 正則表達式匹配的穩定性
-
-3. Unicode 處理：
-   - 類別檢查的正確性
-   - 希臘字母範圍的覆蓋
-   - 字串長度的不變性
-"""

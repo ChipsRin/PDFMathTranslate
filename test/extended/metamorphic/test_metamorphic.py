@@ -1,19 +1,3 @@
-"""
-Metamorphic Testing for PDF Translation
-
-Metamorphic Testing 解決了 PDF 翻譯的 Oracle 問題：
-我們不需要知道「正確的翻譯」是什麼，只需要驗證輸入-輸出的關係。
-
-定義的 Metamorphic Relations (MRs):
-- MR1: 版面保持性 - layout(translate(p)) ≈ layout(p)
-- MR2: 文字量保持性 - 0.8 ≤ |translate(p)| / |p| ≤ 1.2
-- MR3: 方向一致性 - orientation(translate(p)) == orientation(p)
-- MR4: 跨頁一致性 - 不同頁面處理應該一致
-
-Note: 原 MR4 (頁面密度相似性) 已移除，因為與 MR2 重複且假設不成立
-      原 MR5 已重新編號為 MR4
-"""
-
 import unittest
 import fitz  # PyMuPDF
 from pathlib import Path
@@ -37,15 +21,15 @@ class TestMetamorphicRelations(unittest.TestCase):
         cls.test_pdfs = {
             "icml01": {
                 "original": "test/fixtures/sample_pdfs/icml01-ffq_raw.pdf",
-                "translated": "test/output/icml01-ffq_raw-mono.pdf",
+                "translated": "test/fixtures/translated_pdfs/icml01-ffq_raw-mono.pdf",
             },
             "1706": {
                 "original": "test/fixtures/sample_pdfs/1706.03762v7.pdf",
-                "translated": "test/output/1706.03762v7-mono.pdf",
+                "translated": "test/fixtures/translated_pdfs/1706.03762v7-mono.pdf",
             },
             "2406": {
                 "original": "test/fixtures/sample_pdfs/2406.09676v2.pdf",
-                "translated": "test/output/2406.09676v2-mono.pdf",
+                "translated": "test/fixtures/translated_pdfs/2406.09676v2-mono.pdf",
             }
         }
 
