@@ -1,3 +1,55 @@
+# PDFMathTranslate - Extended Testing Fork
+
+> **Software Testing Course Final Project (Group 29)**
+
+---
+
+## Quick Start: Running Tests
+
+**Prerequisites:**
+- Python 3.10-3.12
+- Git
+
+**Installation:**
+```bash
+# Clone repository
+git clone https://github.com/ChipsRin/PDFMathTranslate.git
+cd PDFMathTranslate
+
+# Install dependencies
+pip install -e .
+pip install pytest pytest-cov
+
+# Set up API key (create .env file)
+echo "GOOGLE_MODEL=google" > .env
+```
+
+**Run tests:**
+```bash
+# All tests (original + extended)
+pytest test/
+
+# Only extended tests
+pytest test/extended/
+
+# Only original tests
+pytest test/ --ignore=test/extended/
+
+# Unit tests only (no API key needed)
+pytest test/extended/unit/
+
+# With coverage report (all tests)
+pytest test/ --cov=pdf2zh --cov-report=html
+```
+
+**View results:**
+- Coverage report: `htmlcov/index.html`
+- ISP diagnostic report: `test/extended/isp_test_report.md`
+
+For complete documentation, see [`test/extended/README.md`](test/extended/README.md).
+
+---
+
 <div align="center">
 	<a href="https://go.warp.dev/PDFMathTranslate" target="_blank">
 		<sup>Special thanks to:</sup>
